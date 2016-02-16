@@ -29,5 +29,25 @@
                 /frontend/register.jsp
             </result>   
         </action> 
+        
+        <action name="products" class="com.rishi.onlinestore.controller.ProductsAction" method="showproducts">
+            <result name="success">
+                /frontend/products.jsp
+            </result>   
+        </action> 
+        
+         <action name="cart" class="com.rishi.onlinestore.controller.CartAction" method="showcart">
+            <result name="success">
+                /frontend/cart.jsp
+            </result>   
+        </action> 
+        
+        <action name="product" class="com.rishi.onlinestore.controller.ProductDetailAction" method="productdetail">
+            <result name="success">
+                /frontend/detail.jsp
+            </result>   
+        </action> 
+        
+        
     </package>
 </struts>
