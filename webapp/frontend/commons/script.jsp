@@ -2,6 +2,7 @@
 <!-- *** SCRIPTS TO INCLUDE ***
 _________________________________________________________ -->
 <script src="frontend/js/jquery-1.11.0.min.js"></script>
+<script src="frontend/js/angular.min.js"></script>
 <script src="frontend/js/bootstrap.min.js"></script>
 <script src="frontend/js/jquery.cookie.js"></script>
 <script src="frontend/js/waypoints.min.js"></script>
