@@ -1,10 +1,16 @@
 package com.rishi.onlinestore.model;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.HashSet;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -14,9 +20,15 @@ public class Product implements Serializable {
     @Id
     @GeneratedValue
     private Long product_id;
-    private Long category_id;
     private String product_name;
     private Double product_price;
+    
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinTable(name = "product_category",catalog = "online_store", joinColumns = { 
+			@JoinColumn(name = "product_id", nullable = false, updatable = false) }, 
+			inverseJoinColumns = { @JoinColumn(name = "category_id", 
+					nullable = false, updatable = false) })
+    private Set<Category> categories = new HashSet<Category>(0);
    
 
     public Product() {
@@ -39,16 +51,8 @@ public class Product implements Serializable {
     /**
      * @return the category_id
      */
-    public Long getCategory_id() {
-        return category_id;
-    }
-
-    /**
-     * @param category_id the category_id to set
-     */
-    public void setCategory_id(Long category_id) {
-        this.category_id = category_id;
-    }
+    
+   
 
     /**
      * @return the product_name
@@ -76,6 +80,21 @@ public class Product implements Serializable {
      */
     public void setProduct_price(Double product_price) {
         this.product_price = product_price;
+    }
+
+    /**
+     * @return the categories
+     */
+   
+    public Set<Category> getCategories() {
+        return categories;
+    }
+
+    /**
+     * @param categories the categories to set
+     */
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
     }
 
 }

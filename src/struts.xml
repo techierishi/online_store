@@ -65,8 +65,11 @@
             <result name="success">
                 /backend/category.jsp
             </result>  
+             <result name="redirect" type="redirect">
+                /backend/category.jsp
+            </result>  
         </action>
-        <action name="addproduct" class="com.rishi.onlinestore.admin.controller.ProductAction" method="addproduct">
+        <action name="product*" class="com.rishi.onlinestore.admin.controller.ProductAction" method="product{1}">
             <result name="success">
                 /backend/addproduct.jsp
             </result>  

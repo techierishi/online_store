@@ -37,44 +37,48 @@
                                         <h3 class="box-title">Quick Example</h3>
                                     </div><!-- /.box-header -->
                                     <!-- form start -->
-                                    <form role="form">
+                                    <form role="form" action="productadd" method="post" enctype="multipart/form-data">
                                         <div class="box-body">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                <label for="product_name">Product Name</label>
+                                                <input type="text" class="form-control" name="product.product_name" id="product_name" placeholder="Enter email">
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                                <label for="product_price">Product Price</label>
+                                                <input type="text" class="form-control" name="product.product_price" id="product_price" placeholder="Password">
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputFile">File input</label>
-                                                <input type="file" id="exampleInputFile">
-                                                <p class="help-block">Example block-level help text here.</p>
-                                            </div>
-                                            <div class="checkbox">
-                                                <label>
-                                                    <input type="checkbox"> Check me out
-                                                </label>
-                                            </div>
-                                        </div><!-- /.box-body -->
+                                                <label>Select</label>
+                                                <select class="form-control" name="categories" multiple>
+                                                <s:iterator value="categoryList">
+                                                    <option value="<s:property value="category_id"/>"><s:property value="category_name"/></option>
+                                                </s:iterator>
 
-                                        <div class="box-footer">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            </select>
                                         </div>
-                                    </form>
-                                </div><!-- /.box -->
+                                        <div class="form-group">
+                                            <label for="productImage">Product Image</label>
+                                            <input type="file" name="productImage" id="exampleInputFile">
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Active
+                                            </label>
+                                        </div>
+                                    </div><!-- /.box-body -->
 
-                            </div><!--/.col (left) -->
-                            
-                        </div>   <!-- /.row -->
-                    </section><!-- /.content -->
+                                    <div class="box-footer">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </form>
+                            </div><!-- /.box -->
+                        </div><!--/.col (left) -->
+                    </div>   <!-- /.row -->
+                </section><!-- /.content -->
 
-                </div><!-- /.content-wrapper -->
+            </div><!-- /.content-wrapper -->
 
             <jsp:include page="commons/footer.jsp"></jsp:include>
-
-
                 <!-- Control Sidebar -->
             <jsp:include page="commons/common_sidebar.jsp" ></jsp:include>
                 <!-- Add the sidebar's background. This div must be placed

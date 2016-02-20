@@ -23,32 +23,30 @@ public class CategoryAction extends ActionSupport {
         
         CategoryService categoryService = new CategoryService();
         
-        categoryList = categoryService.getCategoryList();
-        setCategoryList(categoryList);
+        String ret = "";
         
         DBG.d("categoryadd", ""+categoryList);
         
         if(null != category){
-            
+            ret = "redirect";
             boolean result = categoryService.categoryadd(category);
+        }else{
+            ret = SUCCESS;
         }
+        
+        categoryList = categoryService.getCategoryList();
+        setCategoryList(categoryList);
       
-        return SUCCESS;
+        return ret;
 
     }
     
     public String categorylist() throws Exception {
         
         String ret = "";
-
-        if (true) {
-            ret = SUCCESS;
-        } else {
-            ret = ERROR;
-        }
-
+        ret = SUCCESS;
+        
         return ret;
-
     }
 
     /**

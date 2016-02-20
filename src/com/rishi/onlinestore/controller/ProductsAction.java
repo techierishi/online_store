@@ -21,7 +21,6 @@ public class ProductsAction extends ActionSupport {
     private HttpSession session;
 
     private ServletContext application;
-    
     private List<Product> products;
     private String productJson;
 

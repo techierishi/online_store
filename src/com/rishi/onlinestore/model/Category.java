@@ -1,10 +1,13 @@
 package com.rishi.onlinestore.model;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +18,9 @@ public class Category implements Serializable {
     @GeneratedValue
     private Long category_id;
     private String category_name;
+    
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "categories")
+    private Set<Product> products = new HashSet<Product>(0);
 
     public Category() {
     }
@@ -50,6 +56,20 @@ public class Category implements Serializable {
     @Override
     public String toString() {
         return "[{ 'category_id' :" + category_id + "},{ 'category_name' :" + category_name + "}]";
+    }
+
+    /**
+     * @return the products
+     */
+    public Set<Product> getProducts() {
+        return products;
+    }
+
+    /**
+     * @param products the products to set
+     */
+    public void setProducts(Set<Product> products) {
+        this.products = products;
     }
 
 }
