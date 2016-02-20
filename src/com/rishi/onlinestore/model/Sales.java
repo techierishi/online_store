@@ -33,8 +33,4 @@ public class Sales implements Serializable {
         this.sales_id = sales_id;
     }
 
-   
-    
-    
-
 }

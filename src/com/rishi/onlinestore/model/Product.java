@@ -78,8 +78,4 @@ public class Product implements Serializable {
         this.product_price = product_price;
     }
 
-   
-    
-    
-
 }

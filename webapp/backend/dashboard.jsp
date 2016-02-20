@@ -1,4 +1,6 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
     <jsp:include page="commons/head.jsp"></jsp:include>
@@ -40,6 +42,6 @@
                 <div class="control-sidebar-bg"></div>
             </div><!-- ./wrapper -->
 
-        <jsp:include page="commons/script.js" ></jsp:include>
+        <jsp:include page="commons/script.jsp" ></jsp:include>
     </body>
 </html>

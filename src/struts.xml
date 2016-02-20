@@ -16,8 +16,12 @@
     <constant name="struts.multipart.saveDir" value="d:/test" />  
     
     <package name="default" extends="struts-default">
-
-        	
+	
+        <action name="login" class="com.rishi.onlinestore.controller.RegisterAction" method="register">
+            <result name="success">
+                /frontend/register.jsp
+            </result>  
+        </action>
         <action name="register" class="com.rishi.onlinestore.controller.RegisterAction" method="register">
             <result name="success">
                 /frontend/register.jsp
@@ -36,7 +40,7 @@
             </result>   
         </action> 
         
-         <action name="cart" class="com.rishi.onlinestore.controller.CartAction" method="showcart">
+        <action name="cart" class="com.rishi.onlinestore.controller.CartAction" method="showcart">
             <result name="success">
                 /frontend/cart.jsp
             </result>   
@@ -49,5 +53,23 @@
         </action> 
         
         
+    </package>
+    
+    <package name="backend" namespace="/backend" extends="struts-default">	
+        <action name="login" class="com.rishi.onlinestore.admin.controller.LoginAction" method="login">
+            <result name="success">
+                /backend/dashboard.jsp
+            </result>  
+        </action>
+        <action name="category*" class="com.rishi.onlinestore.admin.controller.CategoryAction" method="category{1}">
+            <result name="success">
+                /backend/category.jsp
+            </result>  
+        </action>
+        <action name="addproduct" class="com.rishi.onlinestore.admin.controller.ProductAction" method="addproduct">
+            <result name="success">
+                /backend/addproduct.jsp
+            </result>  
+        </action>
     </package>
 </struts>
