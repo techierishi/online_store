@@ -17,22 +17,11 @@
     
     <package name="default" extends="struts-default">
 	
-        <action name="login" class="com.rishi.onlinestore.controller.RegisterAction" method="register">
-            <result name="success">
-                /frontend/register.jsp
-            </result>  
+        <action name="*User" method="{1}" class="com.rishi.onlinestore.controller.UserAction">
+            <result name="register">/frontend/register.jsp</result>
+            <result name="login">/frontend/register.jsp</result>
+            <result type="profile">/frontend/customer-account.jsp</result>
         </action>
-        <action name="register" class="com.rishi.onlinestore.controller.RegisterAction" method="register">
-            <result name="success">
-                /frontend/register.jsp
-            </result>  
-        </action>
-        	
-        <action name="user_save" class="com.rishi.onlinestore.controller.RegisterAction" method="usersave">
-            <result name="success">
-                /frontend/register.jsp
-            </result>   
-        </action> 
         
         <action name="products" class="com.rishi.onlinestore.controller.ProductsAction" method="showproducts">
             <result name="success">
@@ -65,11 +54,19 @@
             <result name="success">
                 /backend/category.jsp
             </result>  
-             <result name="redirect" type="redirect">
+            <result name="redirect" type="redirect">
                 /backend/category.jsp
             </result>  
         </action>
         <action name="product*" class="com.rishi.onlinestore.admin.controller.ProductAction" method="product{1}">
+            <interceptor-ref name="fileUpload">  
+                <param name="maximumSize">2097152</param>  
+  
+                <param name="allowedTypes">  
+                    image/png,image/gif,image/jpeg,image/pjpeg,text/plain
+                </param>  
+            </interceptor-ref>  
+            <interceptor-ref name="defaultStack"></interceptor-ref>  
             <result name="success">
                 /backend/addproduct.jsp
             </result>  

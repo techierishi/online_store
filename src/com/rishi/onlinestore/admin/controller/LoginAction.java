@@ -1,23 +1,17 @@
 package com.rishi.onlinestore.admin.controller;
 
-import com.rishi.onlinestore.controller.*;
-import javax.annotation.Resource;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.rishi.onlinestore.model.User;
-import com.rishi.onlinestore.service.LoginService;
+import com.rishi.onlinestore.admin.service.LoginService;
 
 public class LoginAction extends ActionSupport {
 
-    private String username;
-
-    private String password;
-
+    private User user;
     private LoginService userService;
 
     private HttpServletRequest request;
@@ -26,31 +20,25 @@ public class LoginAction extends ActionSupport {
 
     private ServletContext application;
 
-    public String getUsername() {
-        return username;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String login() throws Exception {
-        
+
         String ret = "";
 
-        
-        if (true) {
+        if (null != user) {
             ret = SUCCESS;
         } else {
-            ret = ERROR;
+
+            LoginService loginService = new LoginService();
+            loginService.authenticateUser(user.getUserId(), user.getPassword());
+            ret = "profile";
         }
 
         return ret;

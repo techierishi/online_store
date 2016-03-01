@@ -22,6 +22,8 @@ public class Product implements Serializable {
     private Long product_id;
     private String product_name;
     private Double product_price;
+    private String product_image;
+    
     
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinTable(name = "product_category",catalog = "online_store", joinColumns = { 
@@ -95,6 +97,26 @@ public class Product implements Serializable {
      */
     public void setCategories(Set<Category> categories) {
         this.categories = categories;
+    }
+    
+
+    /**
+     * @return the product_image
+     */
+    public String getProduct_image() {
+        return product_image;
+    }
+
+    /**
+     * @param product_image the product_image to set
+     */
+    public void setProduct_image(String product_image) {
+        this.product_image = product_image;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "product_id=" + product_id + ", product_name=" + product_name + ", product_price=" + product_price + ", product_image=" + product_image + ", categories=" + categories + '}';
     }
 
 }

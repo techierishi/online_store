@@ -5,11 +5,13 @@ import javax.servlet.http.HttpServletRequest;
 import com.opensymphony.xwork2.ActionSupport;
 import com.rishi.onlinestore.admin.service.CategoryService;
 import com.rishi.onlinestore.admin.service.ProductService;
+import com.rishi.onlinestore.lib.CONST;
 import com.rishi.onlinestore.lib.DBG;
 import com.rishi.onlinestore.model.Category;
 import com.rishi.onlinestore.model.Product;
 import java.io.File;
 import java.util.List;
+import java.util.logging.Logger;
 import org.apache.commons.io.FileUtils;
 import org.apache.struts2.interceptor.ServletRequestAware;
 
@@ -29,21 +31,32 @@ public class ProductAction extends ActionSupport implements
     public String productadd() throws Exception {
 
         String ret = SUCCESS;
-        ProductService productService = new ProductService();
-        CategoryService categoryService = new CategoryService();
-        categoryList = categoryService.getCategoryList();
+        try {
+            ProductService productService = new ProductService();
+            CategoryService categoryService = new CategoryService();
+            categoryList = categoryService.getCategoryList();
 
-        if (null != product) {
-            String filePath = getServletRequest().getSession().getServletContext().getRealPath("/");
-            DBG.d("addproduct", "Server path:" + filePath);
-            File fileToCreate = new File(filePath, this.productImageFileName);
-            FileUtils.copyFile(this.productImage, fileToCreate);
+            if (null != product) {
+                String filePath = getServletRequest().getSession().getServletContext().getRealPath(CONST.UPLOAD_PATH);
+                DBG.d("addproduct", "Server path:" + filePath);
+                long millis = System.currentTimeMillis();
 
-            product.setProduct_name(this.productImageFileName);
-            productService.productAdd(product);
-            ret = SUCCESS;
-        } else {
-            ret = SUCCESS;
+                String fileName = millis + this.productImageFileName;
+
+                File fileToCreate = new File(filePath, fileName);
+                FileUtils.copyFile(this.productImage, fileToCreate);
+
+                product.setProduct_image(fileName);
+
+                DBG.d("productadd", "" + product);
+
+                productService.productAdd(product);
+                ret = SUCCESS;
+            } else {
+                ret = SUCCESS;
+            }
+        } catch (Exception exception) {
+            exception.printStackTrace();
         }
         return ret;
     }

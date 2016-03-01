@@ -53,11 +53,6 @@ public class Category implements Serializable {
         this.category_name = category_name;
     }
 
-    @Override
-    public String toString() {
-        return "[{ 'category_id' :" + category_id + "},{ 'category_name' :" + category_name + "}]";
-    }
-
     /**
      * @return the products
      */
@@ -70,6 +65,11 @@ public class Category implements Serializable {
      */
     public void setProducts(Set<Product> products) {
         this.products = products;
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" + "category_id=" + category_id + ", category_name=" + category_name + ", products=" + products + '}';
     }
 
 }
