@@ -40,7 +40,7 @@ public class UserService {
         try {
             tx = session.getTransaction();
             tx.begin();
-            Query query = session.createQuery("from User where userId='" + user.getUserId() + "'");
+            Query query = session.createQuery("from User where email='" + user.getEmail()+ "'");
             User u = (User) query.uniqueResult();
             tx.commit();
             if (u != null) {
@@ -57,23 +57,23 @@ public class UserService {
     }
     
     
-    public boolean authenticateUser(String userId, String password) {
-        User user = getUserByUserId(userId);
-        if (user != null && user.getUserId().equals(userId) && user.getPassword().equals(password)) {
+    public boolean authenticateUser(String email, String password) {
+        User user = getUserByUserId(email);
+        if (user != null && user.getEmail().equals(email) && user.getPassword().equals(password)) {
             return true;
         } else {
             return false;
         }
     }
 
-    public User getUserByUserId(String userId) {
+    public User getUserByUserId(String email) {
         Session session = HibernateUtil.openSession();
         Transaction tx = null;
         User user = null;
         try {
             tx = session.getTransaction();
             tx.begin();
-            Query query = session.createQuery("from User where userId='" + userId + "'");
+            Query query = session.createQuery("from User where email='" + email + "'");
             user = (User) query.uniqueResult();
             tx.commit();
         } catch (Exception e) {

@@ -37,7 +37,7 @@ public class LoginAction extends ActionSupport {
         } else {
 
             LoginService loginService = new LoginService();
-            loginService.authenticateUser(user.getUserId(), user.getPassword());
+            loginService.authenticateUser(user.getEmail(), user.getPassword());
             ret = "profile";
         }
 

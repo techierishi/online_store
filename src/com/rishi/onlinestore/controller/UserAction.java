@@ -18,11 +18,7 @@ public class UserAction extends ActionSupport {
     private User user = new User();
 
     private UserService userService;
-
     private HttpServletRequest request;
-
-    private HttpSession httpsession;
-
     private ServletContext application;
 
     public User getUser() {
@@ -35,15 +31,16 @@ public class UserAction extends ActionSupport {
 
     public String login() throws Exception {
         this.request = ServletActionContext.getRequest();
-        this.httpsession = this.request.getSession();
 
         String ret = "";
 
         userService = new UserService();
-        boolean result = userService.authenticateUser(user.getUserId(), user.getPassword());
-        User _user = userService.getUserByUserId(user.getUserId());
+        boolean result = userService.authenticateUser(user.getEmail(), user.getPassword());
+        User _user = userService.getUserByUserId(user.getEmail());
+
+        Map session = ActionContext.getContext().getSession();
+        session.put("user", _user);
         if (result == true) {
-            request.getSession().setAttribute("user", _user);
             ret = "profile";
         } else {
             ret = "login";
@@ -53,14 +50,31 @@ public class UserAction extends ActionSupport {
 
     }
 
+    public String profile() throws Exception {
+        this.request = ServletActionContext.getRequest();
+
+        String ret = "";
+
+        userService = new UserService();
+        Map session = ActionContext.getContext().getSession();
+
+        User _user = (User) session.get("user");
+        if (_user != null) {
+            ret = "profile";
+        } else {
+            ret = "profile";
+        }
+
+        return ret;
+
+    }
+
     public String register() {
-        session = (Map) ActionContext.getContext().getSession();
         String ret = "register";
 
         try {
 
             if (null != user) {
-                session = (Map) ActionContext.getContext().getSession();
                 userService = new UserService();
                 boolean result = userService.register(user);
                 ret = "register";

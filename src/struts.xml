@@ -17,18 +17,19 @@
     
     <package name="default" extends="struts-default">
 	
-        <action name="*User" method="{1}" class="com.rishi.onlinestore.controller.UserAction">
+        <action name="user*" method="{1}" class="com.rishi.onlinestore.controller.UserAction">
             <result name="register">/frontend/register.jsp</result>
             <result name="login">/frontend/register.jsp</result>
-            <result type="profile">/frontend/customer-account.jsp</result>
+            <result name="profile">/frontend/customer-account.jsp</result>
         </action>
         
-        <action name="products" class="com.rishi.onlinestore.controller.ProductsAction" method="showproducts">
-            <result name="success">
-                /frontend/products.jsp
-            </result>   
+        <action name="products" class="com.rishi.onlinestore.controller.ProductsAction" method="list">
+            <result name="product">/frontend/product.jsp</result>
         </action> 
-        
+        <action name="product/*" class="com.rishi.onlinestore.controller.ProductsAction" method="detail">
+            <param name="product_id">{1}</param>  
+            <result name="product">/frontend/product.jsp</result>
+        </action> 
         <action name="cart" class="com.rishi.onlinestore.controller.CartAction" method="showcart">
             <result name="success">
                 /frontend/cart.jsp
@@ -58,7 +59,7 @@
                 /backend/category.jsp
             </result>  
         </action>
-        <action name="product*" class="com.rishi.onlinestore.admin.controller.ProductAction" method="product{1}">
+        <action name="product*" class="com.rishi.onlinestore.admin.controller.ProductAction" method="{1}">
             <interceptor-ref name="fileUpload">  
                 <param name="maximumSize">2097152</param>  
   

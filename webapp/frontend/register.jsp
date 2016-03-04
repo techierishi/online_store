@@ -34,83 +34,59 @@
 
                                 <hr>
 
-                                <form action="<%=context %>/user_save"  method="post">
-
-                                <table    border="1">
-
-                                    <tr><td>First Name<td> <input type="text" name="user.firstName"></td></tr>
-                                    <tr><td>Last Name<td> <input type="text" name="user.lastName"></td></tr>
-                                    <tr><td>Email<td> <input type="password" name="user.email"></td></tr>
-                                    <tr><td>User Id<td> <input type="text" name="user.userId"></td></tr>
-                                    <tr><td>Password<td> <input type="text" name="user.password"></td></tr>
-                                    
-                                   
-                                    <tr>
-
-                                        <td colspan="2" align="center">
-
-                                            <input type="submit" value="Register">
-
-                                            <input type="reset" value="Cancel">
-
-                                        </td>
-
-                                </table>
-
-
-
-
-                            </form>
+                                <form action="userregister" method="post">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input class="form-control" id="name" name="user.name" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input class="form-control" id="email" name="user.email" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input class="form-control" id="password" name="user.password" type="password">
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-user-md"></i> Register</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-6">
-                        <div class="box">
-                            <s:form action="addUser">
-                                <s:textfield name="name" label="User Name" />
-                                <s:password name="password" label="Password" />
-                                <s:radio name="gender" label="Gender" list="{'Male','Female'}" />
-                                <s:select name="country" list="{'India','USA','UK'}" headerKey=""
-                                          headerValue="Country" label="Select a country" />
-                                <s:textarea name="aboutYou" label="About You" />
-                                <s:checkbox name="mailingList"
-                                            label="Would you like to join our mailing list?" />
-                                <s:submit />
-                            </s:form>
+                        <div class="col-md-6">
+                            <div class="box">
+                                <h1>Login</h1>
 
-                            <s:if test="userList.size() > 0">
-                                <div class="content">
-                                    <table class="userTable" cellpadding="5px">
-                                        <tr class="even">
-                                            <th>Name</th>
-                                            <th>Gender</th>
-                                            <th>Country</th>
-                                            <th>About You</th>
-                                            <th>Mailing List</th>
-                                        </tr>
-                                        <s:iterator value="userList" status="userStatus">
-                                            <tr
-                                                class="<s:if test="#userStatus.odd == true ">odd</s:if><s:else>even</s:else>">
-                                                <td><s:property value="email" /></td>
-                                                <td><s:property value="gender" /></td>
-                                                <td><s:property value="country" /></td>
-                                                <td><s:property value="aboutYou" /></td>
-                                                <td><s:property value="mailingList" /></td>
-                                            </tr>
-                                        </s:iterator>
-                                    </table>
-                                </div>
-                            </s:if>
+                                <p class="lead">Already our customer?</p>
+                                <p class="text-muted">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
+                                    mi vitae est. Mauris placerat eleifend leo.</p>
+
+                                <hr>
+
+                                <form action="userlogin" method="post">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input class="form-control" id="email" name="user.email" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input class="form-control" id="password" name="user.password" type="password">
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Log in</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
+
+
                     </div>
-
-
+                    <!-- /.container -->
                 </div>
-                <!-- /.container -->
+                <!-- /#content -->
             </div>
-            <!-- /#content -->
-        </div>
-        <!-- /#all -->
+            <!-- /#all -->
         <jsp:include page="commons/footer.jsp"></jsp:include>
     </body>
 
