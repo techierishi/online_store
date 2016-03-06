@@ -22,6 +22,7 @@ public class Product implements Serializable {
     private Long product_id;
     private String product_name;
     private Double product_price;
+    private String product_qty;
     private String product_image;
     
     
@@ -113,6 +114,17 @@ public class Product implements Serializable {
     public void setProduct_image(String product_image) {
         this.product_image = product_image;
     }
+
+    public String getProduct_qty() {
+        return product_qty;
+    }
+
+    public void setProduct_qty(String product_qty) {
+        this.product_qty = product_qty;
+    }
+    
+    
+    
 
     @Override
     public String toString() {

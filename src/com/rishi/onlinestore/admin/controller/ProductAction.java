@@ -28,7 +28,7 @@ public class ProductAction extends ActionSupport implements
     private List<Category> categoryList;
     private Product product;
 
-    public String productadd() throws Exception {
+    public String add() throws Exception {
 
         String ret = SUCCESS;
         try {
@@ -61,7 +61,7 @@ public class ProductAction extends ActionSupport implements
         return ret;
     }
 
-    public String productlist() throws Exception {
+    public String list() throws Exception {
         String ret = "";
         ProductService productService = new ProductService();
         if (null != productService.getListOfProducts() && !productService.getListOfProducts().isEmpty()) {

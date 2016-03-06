@@ -20,19 +20,19 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
 
     <!-- styles -->
-    <link href="frontend/css/font-awesome.css" rel="stylesheet">
-    <link href="frontend/css/bootstrap.min.css" rel="stylesheet">
-    <link href="frontend/css/animate.min.css" rel="stylesheet">
-    <link href="frontend/css/owl.carousel.css" rel="stylesheet">
-    <link href="frontend/css/owl.theme.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/frontend/css/font-awesome.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/frontend/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/frontend/css/animate.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/frontend/css/owl.carousel.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/frontend/css/owl.theme.css" rel="stylesheet">
 
     <!-- theme stylesheet -->
-    <link href="frontend/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="${pageContext.request.contextPath}/frontend/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
     <!-- your stylesheet with modifications -->
-    <link href="frontend/css/custom.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/frontend/css/custom.css" rel="stylesheet">
 
-    <script src="frontend/js/respond.min.js"></script>
+    <script src="${pageContext.request.contextPath}/frontend/js/respond.min.js"></script>
 
     <link rel="shortcut icon" href="favicon.png">
 

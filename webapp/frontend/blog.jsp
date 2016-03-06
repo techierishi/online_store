@@ -54,7 +54,7 @@
                         </p>
                         <div class="image">
                             <a href="post.html">
-                                <img src="img/blog2.jpg" class="img-responsive" alt="Example blog post alt">
+                                <img src="${pageContext.request.contextPath}/frontend/img/blog2.jpg" class="img-responsive" alt="Example blog post alt">
                             </a>
                         </div>
                         <p class="intro">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
@@ -75,7 +75,7 @@
                         </p>
                         <div class="image">
                             <a href="post.html">
-                                <img src="img/blog.jpg" class="img-responsive" alt="Example blog post alt">
+                                <img src="${pageContext.request.contextPath}/frontend/img/blog.jpg" class="img-responsive" alt="Example blog post alt">
                             </a>
                         </div>
                         <p class="intro">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
@@ -133,7 +133,7 @@
 
                     <div class="banner">
                         <a href="#">
-                            <img src="img/banner.jpg" alt="sales 2014" class="img-responsive">
+                            <img src="${pageContext.request.contextPath}/frontend/img/banner.jpg" alt="sales 2014" class="img-responsive">
                         </a>
                     </div>
                 </div>

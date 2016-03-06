@@ -83,7 +83,7 @@
                                     <tr>
                                         <td>
                                             <a href="#">
-                                                <img src="img/detailsquare.jpg" alt="White Blouse Armani">
+                                                <img src="${pageContext.request.contextPath}/frontend/img/detailsquare.jpg" alt="White Blouse Armani">
                                             </a>
                                         </td>
                                         <td><a href="#">White Blouse Armani</a>
@@ -96,7 +96,7 @@
                                     <tr>
                                         <td>
                                             <a href="#">
-                                                <img src="img/basketsquare.jpg" alt="Black Blouse Armani">
+                                                <img src="${pageContext.request.contextPath}/frontend/img/basketsquare.jpg" alt="Black Blouse Armani">
                                             </a>
                                         </td>
                                         <td><a href="#">Black Blouse Armani</a>
