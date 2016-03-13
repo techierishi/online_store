@@ -13,11 +13,8 @@ public class LoginAction extends ActionSupport {
 
     private User user;
     private LoginService userService;
-
     private HttpServletRequest request;
-
     private HttpSession session;
-
     private ServletContext application;
 
     public User getUser() {

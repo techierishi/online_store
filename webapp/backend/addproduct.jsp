@@ -41,11 +41,15 @@
                                         <div class="box-body">
                                             <div class="form-group">
                                                 <label for="product_name">Product Name</label>
-                                                <input type="text" class="form-control" name="product.product_name" id="product_name" placeholder="Enter email">
+                                                <input type="text" class="form-control" name="product.product_name" id="product_name" placeholder="Enter Product Name">
                                             </div>
                                             <div class="form-group">
                                                 <label for="product_price">Product Price</label>
-                                                <input type="text" class="form-control" name="product.product_price" id="product_price" placeholder="Password">
+                                                <input type="text" class="form-control" name="product.product_price" id="product_price" placeholder="Enter Product Price">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="product_price">Product Quantity</label>
+                                                <input type="text" class="form-control" name="product.product_qty" id="product_price" placeholder="Enter Product Quantity">
                                             </div>
                                             <div class="form-group">
                                                 <label>Select</label>

@@ -2,6 +2,7 @@ package com.rishi.onlinestore.model;
 
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -27,11 +29,17 @@ public class Product implements Serializable {
     
     
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinTable(name = "product_category",catalog = "online_store", joinColumns = { 
+	@JoinTable(name = "CATEGORY",catalog = "online_store", joinColumns = { 
 			@JoinColumn(name = "product_id", nullable = false, updatable = false) }, 
 			inverseJoinColumns = { @JoinColumn(name = "category_id", 
 					nullable = false, updatable = false) })
     private Set<Category> categories = new HashSet<Category>(0);
+    
+    @OneToMany
+    @JoinTable(name = "PRODUCT_ATTRIBUTES", joinColumns = {@JoinColumn(name="product_id")},
+               inverseJoinColumns = {@JoinColumn(name="attribute_id")} )
+    private List<ProductAttributes> attributes;
+    
    
 
     public Product() {
@@ -122,9 +130,15 @@ public class Product implements Serializable {
     public void setProduct_qty(String product_qty) {
         this.product_qty = product_qty;
     }
-    
-    
-    
+
+    public List<ProductAttributes> getAttributes() {
+        return attributes;
+    }
+
+    public void setAttributes(List<ProductAttributes> attributes) {
+        this.attributes = attributes;
+    }
+
 
     @Override
     public String toString() {

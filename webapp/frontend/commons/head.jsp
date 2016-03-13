@@ -7,12 +7,11 @@
     <meta name="robots" content="all,follow">
     <meta name="googlebot" content="index,follow,snippet,archive">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Obaju e-commerce template">
-    <meta name="author" content="Ondrej Svestka | ondrejsvestka.cz">
+    <meta name="author" content="Rishikesh Anand Jha">
     <meta name="keywords" content="">
 
     <title>
-        Obaju : e-commerce template
+        Online Mega Store
     </title>
 
     <meta name="keywords" content="">

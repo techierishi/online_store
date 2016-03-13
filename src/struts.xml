@@ -36,7 +36,19 @@
             <result name="success">
                 /frontend/cart.jsp
             </result>   
+        </action>
+        
+         <action name="checkout*" class="com.rishi.onlinestore.controller.CheckoutAction" method="checkout{1}">
+            <result name="success">
+                /frontend/checkout{1}.jsp
+            </result>   
         </action> 
+        <action name="category" class="com.rishi.onlinestore.controller.CategoryAction" method="category">
+            <result name="success">
+                /frontend/products.jsp
+            </result>   
+        </action> 
+
         
     </package>
     

@@ -39,41 +39,41 @@
                         <div class="panel-body">
                             <ul class="nav nav-pills nav-stacked category-menu">
                                 <li>
-                                    <a href="category.html">Men <span class="badge pull-right">42</span></a>
+                                    <a href="category">Men <span class="badge pull-right">42</span></a>
                                     <ul>
-                                        <li><a href="category.html">T-shirts</a>
+                                        <li><a href="category">T-shirts</a>
                                         </li>
-                                        <li><a href="category.html">Shirts</a>
+                                        <li><a href="category">Shirts</a>
                                         </li>
-                                        <li><a href="category.html">Pants</a>
+                                        <li><a href="category">Pants</a>
                                         </li>
-                                        <li><a href="category.html">Accessories</a>
+                                        <li><a href="category">Accessories</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="active">
-                                    <a href="category.html">Ladies  <span class="badge pull-right">123</span></a>
+                                    <a href="category">Ladies  <span class="badge pull-right">123</span></a>
                                     <ul>
-                                        <li><a href="category.html">T-shirts</a>
+                                        <li><a href="category">T-shirts</a>
                                         </li>
-                                        <li><a href="category.html">Skirts</a>
+                                        <li><a href="category">Skirts</a>
                                         </li>
-                                        <li><a href="category.html">Pants</a>
+                                        <li><a href="category">Pants</a>
                                         </li>
-                                        <li><a href="category.html">Accessories</a>
+                                        <li><a href="category">Accessories</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="category.html">Kids  <span class="badge pull-right">11</span></a>
+                                    <a href="category">Kids  <span class="badge pull-right">11</span></a>
                                     <ul>
-                                        <li><a href="category.html">T-shirts</a>
+                                        <li><a href="category">T-shirts</a>
                                         </li>
-                                        <li><a href="category.html">Skirts</a>
+                                        <li><a href="category">Skirts</a>
                                         </li>
-                                        <li><a href="category.html">Pants</a>
+                                        <li><a href="category">Pants</a>
                                         </li>
-                                        <li><a href="category.html">Accessories</a>
+                                        <li><a href="category">Accessories</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -204,8 +204,8 @@
                                 <p class="price">$124.00</p>
 
                                 <p class="text-center buttons">
-                                    <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a> 
-                                    <a href="basket.html" class="btn btn-default"><i class="fa fa-heart"></i> Add to wishlist</a>
+                                    <a href="cart" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a> 
+                                    <a href="cart" class="btn btn-default"><i class="fa fa-heart"></i> Add to wishlist</a>
                                 </p>
 
 
@@ -277,18 +277,18 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product2_2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
+                                <a href="product/34" class="invisible">
                                     <img src="${pageContext.request.contextPath}/frontend/img/product2.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
@@ -304,18 +304,18 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product1.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product1_2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
+                                <a href="product/34" class="invisible">
                                     <img src="${pageContext.request.contextPath}/frontend/img/product1.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
@@ -332,18 +332,18 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product3.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product3_2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
+                                <a href="product/34" class="invisible">
                                     <img src="${pageContext.request.contextPath}/frontend/img/product3.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
@@ -370,18 +370,18 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product2_2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
+                                <a href="product/34" class="invisible">
                                     <img src="${pageContext.request.contextPath}/frontend/img/product2.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
@@ -397,18 +397,18 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product1.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product1_2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
+                                <a href="product/34" class="invisible">
                                     <img src="${pageContext.request.contextPath}/frontend/img/product1.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">
@@ -425,18 +425,18 @@
                                 <div class="flip-container">
                                     <div class="flipper">
                                         <div class="front">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product3.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                         <div class="back">
-                                            <a href="detail.html">
+                                            <a href="product/34">
                                                 <img src="${pageContext.request.contextPath}/frontend/img/product3_2.jpg" alt="" class="img-responsive">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="detail.html" class="invisible">
+                                <a href="product/34" class="invisible">
                                     <img src="${pageContext.request.contextPath}/frontend/img/product3.jpg" alt="" class="img-responsive">
                                 </a>
                                 <div class="text">

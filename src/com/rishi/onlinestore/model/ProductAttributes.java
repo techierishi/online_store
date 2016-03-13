@@ -1,20 +1,13 @@
 package com.rishi.onlinestore.model;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "PRODUCTS")
+@Table(name = "PRODUCT_ATTRIBUTES")
 public class ProductAttributes implements Serializable {
 
     @Id
@@ -22,12 +15,9 @@ public class ProductAttributes implements Serializable {
     private Long attribute_id;
     private String attribute_name;
     private String attribute_value;
-    private Set<Product> prodcuts = new HashSet<Product>(0);
-   
 
     public ProductAttributes() {
     }
-
 
     /**
      * @return the attribute_id
@@ -69,21 +59,6 @@ public class ProductAttributes implements Serializable {
      */
     public void setAttribute_value(String attribute_value) {
         this.attribute_value = attribute_value;
-    }
-
-    /**
-     * @return the prodcuts
-     */
-    public Set<Product> getProdcuts() {
-        return prodcuts;
-    }
-
-    /**
-     * @param prodcuts the prodcuts to set
-     */
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "attributes")
-    public void setProdcuts(Set<Product> prodcuts) {
-        this.prodcuts = prodcuts;
     }
 
 }

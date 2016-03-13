@@ -6,9 +6,9 @@
     <div class="container">
         <div class="navbar-header">
 
-            <a class="navbar-brand home" href="index.html" data-animate-hover="bounce">
-                <img src="img/logo.png" alt="Obaju logo" class="hidden-xs">
-                <img src="img/logo-small.png" alt="Obaju logo" class="visible-xs"><span class="sr-only">Obaju - go to homepage</span>
+            <a class="navbar-brand home" href="products" data-animate-hover="bounce">
+                <img src="img/logo.png" alt="Home logo" class="hidden-xs">
+                <img src="img/logo-small.png" alt="Home logo" class="visible-xs"><span class="sr-only">Go to homepage</span>
             </a>
             <div class="navbar-buttons">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -19,7 +19,7 @@
                     <span class="sr-only">Toggle search</span>
                     <i class="fa fa-search"></i>
                 </button>
-                <a class="btn btn-default navbar-toggle" href="basket.html">
+                <a class="btn btn-default navbar-toggle" href="cart">
                     <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>
                 </a>
             </div>
@@ -29,7 +29,7 @@
         <div class="navbar-collapse collapse" id="navigation">
 
             <ul class="nav navbar-nav navbar-left">
-                <li class="active"><a href="index.html">Home</a>
+                <li class="active"><a href="products">Home</a>
                 </li>
                 <li class="dropdown yamm-fw">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Men <b class="caret"></b></a>
@@ -40,66 +40,66 @@
                                     <div class="col-sm-3">
                                         <h5>Clothing</h5>
                                         <ul>
-                                            <li><a href="category.html">T-shirts</a>
+                                            <li><a href="category">T-shirts</a>
                                             </li>
-                                            <li><a href="category.html">Shirts</a>
+                                            <li><a href="category">Shirts</a>
                                             </li>
-                                            <li><a href="category.html">Pants</a>
+                                            <li><a href="category">Pants</a>
                                             </li>
-                                            <li><a href="category.html">Accessories</a>
+                                            <li><a href="category">Accessories</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-3">
                                         <h5>Shoes</h5>
                                         <ul>
-                                            <li><a href="category.html">Trainers</a>
+                                            <li><a href="category">Trainers</a>
                                             </li>
-                                            <li><a href="category.html">Sandals</a>
+                                            <li><a href="category">Sandals</a>
                                             </li>
-                                            <li><a href="category.html">Hiking shoes</a>
+                                            <li><a href="category">Hiking shoes</a>
                                             </li>
-                                            <li><a href="category.html">Casual</a>
+                                            <li><a href="category">Casual</a>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-sm-3">
+<!--                                    <div class="col-sm-3">
                                         <h5>Accessories</h5>
                                         <ul>
-                                            <li><a href="category.html">Trainers</a>
+                                            <li><a href="category">Trainers</a>
                                             </li>
-                                            <li><a href="category.html">Sandals</a>
+                                            <li><a href="category">Sandals</a>
                                             </li>
-                                            <li><a href="category.html">Hiking shoes</a>
+                                            <li><a href="category">Hiking shoes</a>
                                             </li>
-                                            <li><a href="category.html">Casual</a>
+                                            <li><a href="category">Casual</a>
                                             </li>
-                                            <li><a href="category.html">Hiking shoes</a>
+                                            <li><a href="category">Hiking shoes</a>
                                             </li>
-                                            <li><a href="category.html">Casual</a>
+                                            <li><a href="category">Casual</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-3">
                                         <h5>Featured</h5>
                                         <ul>
-                                            <li><a href="category.html">Trainers</a>
+                                            <li><a href="category">Trainers</a>
                                             </li>
-                                            <li><a href="category.html">Sandals</a>
+                                            <li><a href="category">Sandals</a>
                                             </li>
-                                            <li><a href="category.html">Hiking shoes</a>
+                                            <li><a href="category">Hiking shoes</a>
                                             </li>
                                         </ul>
                                         <h5>Looks and trends</h5>
                                         <ul>
-                                            <li><a href="category.html">Trainers</a>
+                                            <li><a href="category">Trainers</a>
                                             </li>
-                                            <li><a href="category.html">Sandals</a>
+                                            <li><a href="category">Sandals</a>
                                             </li>
-                                            <li><a href="category.html">Hiking shoes</a>
+                                            <li><a href="category">Hiking shoes</a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                             <!-- /.yamm-content -->
@@ -116,52 +116,52 @@
                                     <div class="col-sm-3">
                                         <h5>Clothing</h5>
                                         <ul>
-                                            <li><a href="category.html">T-shirts</a>
+                                            <li><a href="category">T-shirts</a>
                                             </li>
-                                            <li><a href="category.html">Shirts</a>
+                                            <li><a href="category">Shirts</a>
                                             </li>
-                                            <li><a href="category.html">Pants</a>
+                                            <li><a href="category">Pants</a>
                                             </li>
-                                            <li><a href="category.html">Accessories</a>
+                                            <li><a href="category">Accessories</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-3">
                                         <h5>Shoes</h5>
                                         <ul>
-                                            <li><a href="category.html">Trainers</a>
+                                            <li><a href="category">Trainers</a>
                                             </li>
-                                            <li><a href="category.html">Sandals</a>
+                                            <li><a href="category">Sandals</a>
                                             </li>
-                                            <li><a href="category.html">Hiking shoes</a>
+                                            <li><a href="category">Hiking shoes</a>
                                             </li>
-                                            <li><a href="category.html">Casual</a>
+                                            <li><a href="category">Casual</a>
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-sm-3">
+<!--                                    <div class="col-sm-3">
                                         <h5>Accessories</h5>
                                         <ul>
-                                            <li><a href="category.html">Trainers</a>
+                                            <li><a href="category">Trainers</a>
                                             </li>
-                                            <li><a href="category.html">Sandals</a>
+                                            <li><a href="category">Sandals</a>
                                             </li>
-                                            <li><a href="category.html">Hiking shoes</a>
+                                            <li><a href="category">Hiking shoes</a>
                                             </li>
-                                            <li><a href="category.html">Casual</a>
+                                            <li><a href="category">Casual</a>
                                             </li>
-                                            <li><a href="category.html">Hiking shoes</a>
+                                            <li><a href="category">Hiking shoes</a>
                                             </li>
-                                            <li><a href="category.html">Casual</a>
+                                            <li><a href="category">Casual</a>
                                             </li>
                                         </ul>
                                         <h5>Looks and trends</h5>
                                         <ul>
-                                            <li><a href="category.html">Trainers</a>
+                                            <li><a href="category">Trainers</a>
                                             </li>
-                                            <li><a href="category.html">Sandals</a>
+                                            <li><a href="category">Sandals</a>
                                             </li>
-                                            <li><a href="category.html">Hiking shoes</a>
+                                            <li><a href="category">Hiking shoes</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -176,7 +176,7 @@
                                                 <img src="img/banner2.jpg" class="img img-responsive" alt="">
                                             </a>
                                         </div>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                             <!-- /.yamm-content -->
@@ -184,7 +184,7 @@
                     </ul>
                 </li>
 
-                <li class="dropdown yamm-fw">
+<!--                <li class="dropdown yamm-fw">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">Template <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
@@ -195,7 +195,7 @@
                                         <ul>
                                             <li><a href="index.html">Homepage</a>
                                             </li>
-                                            <li><a href="category.html">Category - sidebar left</a>
+                                            <li><a href="category">Category - sidebar left</a>
                                             </li>
                                             <li><a href="category-right.html">Category - sidebar right</a>
                                             </li>
@@ -256,10 +256,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- /.yamm-content -->
+                             /.yamm-content 
                         </li>
                     </ul>
-                </li>
+                </li>-->
             </ul>
 
         </div>
@@ -268,7 +268,7 @@
         <div class="navbar-buttons">
 
             <div class="navbar-collapse collapse right" id="basket-overview">
-                <a href="basket.html" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
+                <a href="cart" class="btn btn-primary navbar-btn"><i class="fa fa-shopping-cart"></i><span class="hidden-sm">3 items in cart</span></a>
             </div>
             <!--/.nav-collapse -->
 
