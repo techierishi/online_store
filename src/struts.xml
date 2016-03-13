@@ -17,8 +17,9 @@
     <constant name="struts.multipart.maxSize" value="1024102400" />       
     <constant name="struts.multipart.saveDir" value="d:/test" />  
     
-    <package name="default" extends="struts-default">
-	
+    <package name="default" extends="json-default">
+        
+        
         <action name="user*" method="{1}" class="com.rishi.onlinestore.controller.UserAction">
             <result name="register">/frontend/register.jsp</result>
             <result name="login">/frontend/register.jsp</result>
@@ -38,7 +39,11 @@
             </result>   
         </action>
         
-         <action name="checkout*" class="com.rishi.onlinestore.controller.CheckoutAction" method="checkout{1}">
+        <action name="addtocart" class="com.rishi.onlinestore.controller.CartAction" method="addtocart">
+            <result type="json" />
+        </action>
+        
+        <action name="checkout*" class="com.rishi.onlinestore.controller.CheckoutAction" method="checkout{1}">
             <result name="success">
                 /frontend/checkout{1}.jsp
             </result>   

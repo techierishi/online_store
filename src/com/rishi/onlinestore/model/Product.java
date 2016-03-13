@@ -1,22 +1,20 @@
 package com.rishi.onlinestore.model;
 
 import java.io.Serializable;
-import java.sql.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 @Entity
 @Table(name = "PRODUCTS")
@@ -30,13 +28,16 @@ public class Product extends AbstractTimestampEntity implements Serializable {
     private String product_qty;
     private String product_image;
 
-//    @OneToMany
-//    @JoinTable(name = "PRODUCT_ATTRIBUTES", joinColumns = {
-//        @JoinColumn(name = "product_id")},
-//            inverseJoinColumns = {
-//                @JoinColumn(name = "attribute_id")})
-//    private List<ProductAttributes> attributes;
+    @OneToMany
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @JoinTable(name = "PRODUCT_ATTRIBUTES", joinColumns = {
+        @JoinColumn(name = "product_id")},
+            inverseJoinColumns = {
+                @JoinColumn(name = "attribute_id")})
+    private List<ProductAttributes> attributes;
+
     @ManyToMany(cascade = {CascadeType.ALL})
+    @LazyCollection(LazyCollectionOption.FALSE)
     @JoinTable(name = "product_category", joinColumns = {
         @JoinColumn(name = "product_id")}, inverseJoinColumns = {
         @JoinColumn(name = "category_id")})
@@ -112,13 +113,14 @@ public class Product extends AbstractTimestampEntity implements Serializable {
         this.product_qty = product_qty;
     }
 
-//    public List<ProductAttributes> getAttributes() {
-//        return attributes;
-//    }
-//
-//    public void setAttributes(List<ProductAttributes> attributes) {
-//        this.attributes = attributes;
-//    }
+    public List<ProductAttributes> getAttributes() {
+        return attributes;
+    }
+
+    public void setAttributes(List<ProductAttributes> attributes) {
+        this.attributes = attributes;
+    }
+
     public Set<Category> getCategories() {
         return categories;
     }

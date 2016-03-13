@@ -166,327 +166,150 @@
                             <div class="banner">
                                 <a href="#">
                                     <img src="${pageContext.request.contextPath}/frontend/img/banner.jpg" alt="sales 2014" class="img-responsive">
-                                </a>
-                            </div>
+                            </a>
                         </div>
-
-                        <div class="col-md-9">
-                            <div class="box">
-                                <h1>Ladies</h1>
-                                <p>In our Ladies department we offer wide selection of the best products we have found and carefully selected worldwide.</p>
-                            </div>
-
-                            <div class="box info-bar">
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-4 products-showing">
-                                        Showing <strong>12</strong> of <strong>25</strong> products
-                                    </div>
-
-                                    <div class="col-sm-12 col-md-8  products-number-sort">
-                                        <div class="row">
-                                            <form class="form-inline">
-                                                <div class="col-md-6 col-sm-6">
-                                                    <div class="products-number">
-                                                        <strong>Show</strong>  <a href="#" class="btn btn-default btn-sm btn-primary">12</a>  <a href="#" class="btn btn-default btn-sm">24</a>  <a href="#" class="btn btn-default btn-sm">All</a> products
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-6">
-                                                    <div class="products-sort-by">
-                                                        <strong>Sort by</strong>
-                                                        <select name="sort-by" class="form-control">
-                                                            <option>Price</option>
-                                                            <option>Name</option>
-                                                            <option>Sales first</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row products"  ng-app="product_module" ng-controller="product_controller" >
-
-                                <div class="col-md-4 col-sm-6" ng-repeat="product in products">
-                                    <div class="product">
-                                        <div class="flip-container">
-                                            <div class="flipper">
-                                                <div class="front">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product1.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                                <div class="back">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product1_2.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="product" class="invisible">
-                                            <img src="${pageContext.request.contextPath}/frontend/img/product1.jpg" alt="" class="img-responsive">
-                                        </a>
-                                        <div class="text">
-                                            <h3><a href="product">Fur coat with very but very very long name</a></h3>
-                                            <p class="price">$143.00</p>
-                                            <p class="buttons">
-                                                <a href="product" class="btn btn-default">View detail</a>
-                                                <a href="cart" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </p>
-                                        </div>
-                                        <!-- /.text -->
-                                    </div>
-                                    <!-- /.product -->
-                                </div>
-
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="product">
-                                        <div class="flip-container">
-                                            <div class="flipper">
-                                                <div class="front">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product2.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                                <div class="back">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product2_2.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="product" class="invisible">
-                                            <img src="${pageContext.request.contextPath}/frontend/img/product2.jpg" alt="" class="img-responsive">
-                                        </a>
-                                        <div class="text">
-                                            <h3><a href="product">White Blouse Armani</a></h3>
-                                            <p class="price"><del>$280</del> $143.00</p>
-                                            <p class="buttons">
-                                                <a href="product" class="btn btn-default">View detail</a>
-                                                <a href="cart" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </p>
-                                        </div>
-                                        <!-- /.text -->
-
-                                        <div class="ribbon sale">
-                                            <div class="theribbon">SALE</div>
-                                            <div class="ribbon-background"></div>
-                                        </div>
-                                        <!-- /.ribbon -->
-
-                                        <div class="ribbon new">
-                                            <div class="theribbon">NEW</div>
-                                            <div class="ribbon-background"></div>
-                                        </div>
-                                        <!-- /.ribbon -->
-
-                                        <div class="ribbon gift">
-                                            <div class="theribbon">GIFT</div>
-                                            <div class="ribbon-background"></div>
-                                        </div>
-                                        <!-- /.ribbon -->
-                                    </div>
-                                    <!-- /.product -->
-                                </div>
-
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="product">
-                                        <div class="flip-container">
-                                            <div class="flipper">
-                                                <div class="front">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product3.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                                <div class="back">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product3_2.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="product" class="invisible">
-                                            <img src="${pageContext.request.contextPath}/frontend/img/product3.jpg" alt="" class="img-responsive">
-                                        </a>
-                                        <div class="text">
-                                            <h3><a href="product">Black Blouse Versace</a></h3>
-                                            <p class="price">$143.00</p>
-                                            <p class="buttons">
-                                                <a href="product" class="btn btn-default">View detail</a>
-                                                <a href="cart" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </p>
-
-                                        </div>
-                                        <!-- /.text -->
-                                    </div>
-                                    <!-- /.product -->
-                                </div>
-
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="product">
-                                        <div class="flip-container">
-                                            <div class="flipper">
-                                                <div class="front">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product3.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                                <div class="back">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product3_2.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="product" class="invisible">
-                                            <img src="${pageContext.request.contextPath}/frontend/img/product3.jpg" alt="" class="img-responsive">
-                                        </a>
-                                        <div class="text">
-                                            <h3><a href="product">Black Blouse Versace</a></h3>
-                                            <p class="price">$143.00</p>
-                                            <p class="buttons">
-                                                <a href="product" class="btn btn-default">View detail</a>
-                                                <a href="cart" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </p>
-
-                                        </div>
-                                        <!-- /.text -->
-                                    </div>
-                                    <!-- /.product -->
-                                </div>
-
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="product">
-                                        <div class="flip-container">
-                                            <div class="flipper">
-                                                <div class="front">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product2.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                                <div class="back">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product2_2.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="product" class="invisible">
-                                            <img src="${pageContext.request.contextPath}/frontend/img/product2.jpg" alt="" class="img-responsive">
-                                        </a>
-                                        <div class="text">
-                                            <h3><a href="product">White Blouse Versace</a></h3>
-                                            <p class="price">$143.00</p>
-                                            <p class="buttons">
-                                                <a href="product" class="btn btn-default">View detail</a>
-                                                <a href="cart" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </p>
-
-                                        </div>
-                                        <!-- /.text -->
-
-                                        <div class="ribbon new">
-                                            <div class="theribbon">NEW</div>
-                                            <div class="ribbon-background"></div>
-                                        </div>
-                                        <!-- /.ribbon -->
-                                    </div>
-                                    <!-- /.product -->
-                                </div>
-
-                                <div class="col-md-4 col-sm-6">
-                                    <div class="product">
-                                        <div class="flip-container">
-                                            <div class="flipper">
-                                                <div class="front">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product1.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                                <div class="back">
-                                                    <a href="product">
-                                                        <img src="${pageContext.request.contextPath}/frontend/img/product1_2.jpg" alt="" class="img-responsive">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a href="product" class="invisible">
-                                            <img src="${pageContext.request.contextPath}/frontend/img/product1.jpg" alt="" class="img-responsive">
-                                        </a>
-                                        <div class="text">
-                                            <h3><a href="product">Fur coat</a></h3>
-                                            <p class="price">$143.00</p>
-                                            <p class="buttons">
-                                                <a href="product" class="btn btn-default">View detail</a>
-                                                <a href="cart" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </p>
-
-                                        </div>
-                                        <!-- /.text -->
-
-                                        <div class="ribbon gift">
-                                            <div class="theribbon">GIFT</div>
-                                            <div class="ribbon-background"></div>
-                                        </div>
-                                        <!-- /.ribbon -->
-
-                                    </div>
-                                    <!-- /.product -->
-                                </div>
-                                <!-- /.col-md-4 -->
-                            </div>
-                            <!-- /.products -->
-
-                            <div class="pages">
-
-                                <p class="loadMore">
-                                    <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i> Load more</a>
-                                </p>
-
-                                <ul class="pagination">
-                                    <li><a href="#">&laquo;</a>
-                                    </li>
-                                    <li class="active"><a href="#">1</a>
-                                    </li>
-                                    <li><a href="#">2</a>
-                                    </li>
-                                    <li><a href="#">3</a>
-                                    </li>
-                                    <li><a href="#">4</a>
-                                    </li>
-                                    <li><a href="#">5</a>
-                                    </li>
-                                    <li><a href="#">&raquo;</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-
-                        </div>
-                        <!-- /.col-md-9 -->
                     </div>
-                    <!-- /.container -->
+
+                    <div class="col-md-9">
+                        <div class="box">
+                            <h1>Ladies</h1>
+                            <p>In our Ladies department we offer wide selection of the best products we have found and carefully selected worldwide.</p>
+                        </div>
+
+                        <div class="box info-bar">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4 products-showing">
+                                    Showing <strong>12</strong> of <strong>25</strong> products
+                                </div>
+
+                                <div class="col-sm-12 col-md-8  products-number-sort">
+                                    <div class="row">
+                                        <form class="form-inline">
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="products-number">
+                                                    <strong>Show</strong>  <a href="#" class="btn btn-default btn-sm btn-primary">12</a>  <a href="#" class="btn btn-default btn-sm">24</a>  <a href="#" class="btn btn-default btn-sm">All</a> products
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <div class="products-sort-by">
+                                                    <strong>Sort by</strong>
+                                                    <select name="sort-by" class="form-control">
+                                                        <option>Price</option>
+                                                        <option>Name</option>
+                                                        <option>Sales first</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row products"  ng-app="product_module" ng-controller="product_controller" >
+
+                            <div class="col-md-4 col-sm-6" ng-repeat="product in products">
+                                <div class="product">
+                                    <div class="flip-container">
+                                        <div class="flipper">
+                                            <div class="front">
+                                                <a href="product">
+                                                    <img src="${pageContext.request.contextPath}/uploads/{{ product.product_image}}" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                            <div class="back">
+                                                <a href="product">
+                                                    <img src="${pageContext.request.contextPath}/uploads/{{ product.product_image}}" alt="" class="img-responsive">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="product" class="invisible">
+                                        <img src="${pageContext.request.contextPath}/frontend/img/product1.jpg" alt="" class="img-responsive">
+                                    </a>
+                                    <div class="text">
+                                        <h3><a href="product">{{ product.product_name}}</a></h3>
+                                        <p class="price">{{ product.product_price}}</p>
+                                        <p class="buttons">
+                                            <a href="product" class="btn btn-default">View detail</a>
+                                            <a href="#addtocart/{{ product.product_id}}" ng-click="addToCart(product.product_id)" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        </p>
+                                    </div>
+                                    <!-- /.text -->
+                                </div>
+                                <!-- /.product -->
+                            </div>
+                        </div>
+                        <!-- /.col-md-4 -->
+                    </div>
+                    <!-- /.products -->
+
+                    <div class="pages">
+
+                        <p class="loadMore">
+                            <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i> Load more</a>
+                        </p>
+
+                        <ul class="pagination">
+                            <li><a href="#">&laquo;</a>
+                            </li>
+                            <li class="active"><a href="#">1</a>
+                            </li>
+                            <li><a href="#">2</a>
+                            </li>
+                            <li><a href="#">3</a>
+                            </li>
+                            <li><a href="#">4</a>
+                            </li>
+                            <li><a href="#">5</a>
+                            </li>
+                            <li><a href="#">&raquo;</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
                 </div>
-                <!-- /#content -->
-
+                <!-- /.col-md-9 -->
             </div>
-            <!-- /#all -->
+            <!-- /.container -->
+        </div>
+        <!-- /#content -->
+
+    </div>
+    <!-- /#all -->
 
 
-        <jsp:include page="commons/footer.jsp"></jsp:include>
+    <jsp:include page="commons/footer.jsp"></jsp:include>
 
-        <jsp:include page="commons/script.jsp"></jsp:include>
+    <jsp:include page="commons/script.jsp"></jsp:include>
 
         <script>
             var app = angular.module("product_module", []);
             app.controller('product_controller', function ($scope) {
-                $scope.products = <s:property value="%{productJson}" escape="false" />
+                $scope.products = <s:property value="%{productJson}" escape="false" />;
 
+
+                $scope.addToCart = function (a) {
+                    $.ajax({
+                        type: 'POST',
+                        url: "addtocart",
+                        data: "cart.product_id=" + a,
+                        dataType: "text",
+                        success: function (response) {
+                            alert('Response ' + response);
+                        },
+                        error: function (e) {
+                            alert('Error: ' + e);
+                        }
+                    });
+                }
             });
 
-        </script>
 
-    </body>
+
+    </script>
+
+</body>
 
 </html>
