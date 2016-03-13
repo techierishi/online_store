@@ -19,9 +19,9 @@ public class Category implements Serializable {
     private Long category_id;
     private String category_name;
     
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "categories")
-    private Set<Product> products = new HashSet<Product>(0);
-
+    @ManyToMany(mappedBy="categories")
+    private Set<Product> product = new HashSet<Product>();
+    
     public Category() {
     }
 
@@ -53,23 +53,14 @@ public class Category implements Serializable {
         this.category_name = category_name;
     }
 
-    /**
-     * @return the products
-     */
-    public Set<Product> getProducts() {
-        return products;
+    public Set<Product> getProduct() {
+        return product;
     }
 
-    /**
-     * @param products the products to set
-     */
-    public void setProducts(Set<Product> products) {
-        this.products = products;
+    public void setProduct(Set<Product> products) {
+        this.product = products;
     }
 
-    @Override
-    public String toString() {
-        return "Category{" + "category_id=" + category_id + ", category_name=" + category_name + ", products=" + products + '}';
-    }
+
 
 }

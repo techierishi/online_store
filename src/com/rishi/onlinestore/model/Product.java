@@ -1,6 +1,7 @@
 package com.rishi.onlinestore.model;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -13,11 +14,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "PRODUCTS")
-public class Product implements Serializable {
+public class Product extends AbstractTimestampEntity implements Serializable {
 
     @Id
     @GeneratedValue
@@ -26,21 +29,18 @@ public class Product implements Serializable {
     private Double product_price;
     private String product_qty;
     private String product_image;
-    
-    
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinTable(name = "CATEGORY",catalog = "online_store", joinColumns = { 
-			@JoinColumn(name = "product_id", nullable = false, updatable = false) }, 
-			inverseJoinColumns = { @JoinColumn(name = "category_id", 
-					nullable = false, updatable = false) })
-    private Set<Category> categories = new HashSet<Category>(0);
-    
-    @OneToMany
-    @JoinTable(name = "PRODUCT_ATTRIBUTES", joinColumns = {@JoinColumn(name="product_id")},
-               inverseJoinColumns = {@JoinColumn(name="attribute_id")} )
-    private List<ProductAttributes> attributes;
-    
-   
+
+//    @OneToMany
+//    @JoinTable(name = "PRODUCT_ATTRIBUTES", joinColumns = {
+//        @JoinColumn(name = "product_id")},
+//            inverseJoinColumns = {
+//                @JoinColumn(name = "attribute_id")})
+//    private List<ProductAttributes> attributes;
+    @ManyToMany(cascade = {CascadeType.ALL})
+    @JoinTable(name = "product_category", joinColumns = {
+        @JoinColumn(name = "product_id")}, inverseJoinColumns = {
+        @JoinColumn(name = "category_id")})
+    private Set<Category> categories = new HashSet<Category>();
 
     public Product() {
     }
@@ -62,9 +62,6 @@ public class Product implements Serializable {
     /**
      * @return the category_id
      */
-    
-   
-
     /**
      * @return the product_name
      */
@@ -94,22 +91,6 @@ public class Product implements Serializable {
     }
 
     /**
-     * @return the categories
-     */
-   
-    public Set<Category> getCategories() {
-        return categories;
-    }
-
-    /**
-     * @param categories the categories to set
-     */
-    public void setCategories(Set<Category> categories) {
-        this.categories = categories;
-    }
-    
-
-    /**
      * @return the product_image
      */
     public String getProduct_image() {
@@ -131,18 +112,19 @@ public class Product implements Serializable {
         this.product_qty = product_qty;
     }
 
-    public List<ProductAttributes> getAttributes() {
-        return attributes;
+//    public List<ProductAttributes> getAttributes() {
+//        return attributes;
+//    }
+//
+//    public void setAttributes(List<ProductAttributes> attributes) {
+//        this.attributes = attributes;
+//    }
+    public Set<Category> getCategories() {
+        return categories;
     }
 
-    public void setAttributes(List<ProductAttributes> attributes) {
-        this.attributes = attributes;
-    }
-
-
-    @Override
-    public String toString() {
-        return "Product{" + "product_id=" + product_id + ", product_name=" + product_name + ", product_price=" + product_price + ", product_image=" + product_image + ", categories=" + categories + '}';
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
     }
 
 }

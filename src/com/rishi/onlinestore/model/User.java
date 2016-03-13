@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "USER")
-public class User implements Serializable {
+public class User  extends AbstractTimestampEntity implements Serializable {
 
     @Id
     @GeneratedValue
@@ -26,6 +26,7 @@ public class User implements Serializable {
     public User() {
     }
 
+    
     public User(String name, String email, String password) {
         this.name = name;
         this.email = email;
@@ -116,10 +117,5 @@ public class User implements Serializable {
     public String toString() {
         return "User{" + "id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", phone=" + phone + ", address=" + address + ", pincode=" + pincode + ", state=" + state + ", country=" + country + ", card_number=" + card_number + '}';
     }
-
-    
-    
-    
-    
 
 }

@@ -32,10 +32,10 @@
                 <div class="modal-body">
                     <form action="userlogin" method="post">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="email-modal" placeholder="email">
+                            <input type="text" class="form-control" id="email-modal" name="user.email" placeholder="email">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="password-modal" placeholder="password">
+                            <input type="password" class="form-control"  name="user.password" id="password-modal" placeholder="password">
                         </div>
 
                         <p class="text-center">
