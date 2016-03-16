@@ -286,9 +286,18 @@
 
         <script>
             var app = angular.module("product_module", []);
-            app.controller('product_controller', function ($scope) {
-                $scope.products = <s:property value="%{productJson}" escape="false" />;
+            app.controller('product_controller', function ($scope,$http) {
 
+                $http({
+                    method: "POST",
+                    url: "productsJson"
+                }).then(function(response) {
+                    $scope.products = response.data;
+                    console.log($scope.products);
+                }, function(response) {
+                    $scope.errorMessage = response.statusText;
+                    console.log($scope.errorMessage);
+                });
 
                 $scope.addToCart = function (a) {
                     $.ajax({
@@ -297,17 +306,14 @@
                         data: "cart.product_id=" + a,
                         dataType: "text",
                         success: function (response) {
-                            alert('Response ' + response);
+                            //alert('Response ' + response);
                         },
                         error: function (e) {
-                            alert('Error: ' + e);
+                            //alert('Error: ' + e);
                         }
                     });
                 }
             });
-
-
-
     </script>
 
 </body>

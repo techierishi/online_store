@@ -10,6 +10,8 @@ import org.apache.struts2.ServletActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.rishi.onlinestore.model.Product;
 import com.rishi.onlinestore.service.ProductService;
+import java.io.InputStream;
+import java.io.StringBufferInputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +27,9 @@ public class ProductsAction extends ActionSupport {
     private Map<String, String> params = new HashMap<String, String>();
 
     private Product product;
-    private String productJson;
+    private InputStream productJson;
+
+   
 
     public String list() throws Exception {
         this.request = ServletActionContext.getRequest();
@@ -38,15 +42,35 @@ public class ProductsAction extends ActionSupport {
         if (true) {
             if (null != productService.getListOfProducts() && !productService.getListOfProducts().isEmpty()) {
                 setProducts(productService.getListOfProducts());
-
-                Gson gson = new Gson();
-                String json = gson.toJson(productService.getListOfProducts());
-
-                setProductJson(json);
             }
             ret = "products";
         } else {
             ret = "products";
+        }
+
+        return ret;
+
+    }
+
+    public String productsJson() throws Exception {
+        this.request = ServletActionContext.getRequest();
+        this.session = this.request.getSession();
+
+        String ret = "";
+
+        ProductService productService = new ProductService();
+
+        if (true) {
+            if (null != productService.getListOfProducts() && !productService.getListOfProducts().isEmpty()) {
+                Gson gson = new Gson();
+                String json = gson.toJson(productService.getListOfProducts());
+
+
+                productJson = new StringBufferInputStream(json);
+            }
+            ret = SUCCESS;
+        } else {
+            ret = SUCCESS;
         }
 
         return ret;
@@ -93,15 +117,10 @@ public class ProductsAction extends ActionSupport {
     /**
      * @return the productJson
      */
-    public String getProductJson() {
+    public InputStream getProductJson() {
         return productJson;
     }
 
-    /**
-     * @param productJson the productJson to set
-     */
-    public void setProductJson(String productJson) {
-        this.productJson = productJson;
-    }
+  
 
 }

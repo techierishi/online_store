@@ -22,7 +22,7 @@
                         </li>
                         <li><a href="#">Tops</a>
                         </li>
-                        <li>White Blouse Armani</li>
+                        <li>White T-Shirt Armani</li>
                     </ul>
 
                 </div>
