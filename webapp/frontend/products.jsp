@@ -284,36 +284,36 @@
 
     <jsp:include page="commons/script.jsp"></jsp:include>
 
-        <script>
-            var app = angular.module("product_module", []);
-            app.controller('product_controller', function ($scope,$http) {
+    <script>
+        var app = angular.module("product_module", []);
+        app.controller('product_controller', function ($scope, $http) {
 
-                $http({
-                    method: "POST",
-                    url: "productsJson"
-                }).then(function(response) {
-                    $scope.products = response.data;
-                    console.log($scope.products);
-                }, function(response) {
-                    $scope.errorMessage = response.statusText;
-                    console.log($scope.errorMessage);
-                });
-
-                $scope.addToCart = function (a) {
-                    $.ajax({
-                        type: 'POST',
-                        url: "addtocart",
-                        data: "cart.product_id=" + a,
-                        dataType: "text",
-                        success: function (response) {
-                            //alert('Response ' + response);
-                        },
-                        error: function (e) {
-                            //alert('Error: ' + e);
-                        }
-                    });
-                }
+            $http({
+                method: "POST",
+                url: "productsJson"
+            }).then(function (response) {
+                $scope.products = response.data;
+                console.log($scope.products);
+            }, function (response) {
+                $scope.errorMessage = response.statusText;
+                console.log($scope.errorMessage);
             });
+
+            $scope.addToCart = function (a) {
+                $.ajax({
+                    type: 'POST',
+                    url: "addtocart",
+                    data: "cart.product_id=" + a,
+                    dataType: "text",
+                    success: function (response) {
+                        //alert('Response ' + response);
+                    },
+                    error: function (e) {
+                        //alert('Error: ' + e);
+                    }
+                });
+            }
+        });
     </script>
 
 </body>

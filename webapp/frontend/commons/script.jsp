@@ -10,6 +10,8 @@ _________________________________________________________ -->
 <script src="${pageContext.request.contextPath}/frontend/js/bootstrap-hover-dropdown.js"></script>
 <script src="${pageContext.request.contextPath}/frontend/js/owl.carousel.min.js"></script>
 <script src="${pageContext.request.contextPath}/frontend/js/front.js"></script>
+<script src="${pageContext.request.contextPath}/frontend/js/jquery-ui.min.js"></script>
+<script src="${pageContext.request.contextPath}/frontend/js/jquery.floatingmessage.min.js"></script>
 
 
 

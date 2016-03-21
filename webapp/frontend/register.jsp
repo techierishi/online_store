@@ -88,6 +88,18 @@
             </div>
             <!-- /#all -->
         <jsp:include page="commons/footer.jsp"></jsp:include>
+        <jsp:include page="commons/script.jsp"></jsp:include>
+
+        <script>
+
+            var a = $.floatingMessage("Destroy method1", {
+                position: "top-right",
+                height: 25
+            });
+            setTimeout(function () {
+                a.floatingMessage("destroy");
+            }, 3000);
+        </script>
     </body>
 
 </html>

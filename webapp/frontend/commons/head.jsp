@@ -24,6 +24,7 @@
     <link href="${pageContext.request.contextPath}/frontend/css/animate.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/frontend/css/owl.carousel.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/frontend/css/owl.theme.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/frontend/css/jquery-ui.css" rel="stylesheet" />
 
     <!-- theme stylesheet -->
     <link href="${pageContext.request.contextPath}/frontend/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
