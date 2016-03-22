@@ -92,12 +92,61 @@
 
         <script>
 
-            var a = $.floatingMessage("Destroy method1", {
+            var a = $.floatingMessage("Please enter valid email id.", {
                 position: "top-right",
-                height: 25
+                height: 40,
+                show: "blind",
+                hide: "puff",
+                stuffEaseTime: 100,
+                stuffEasing: "easeInExpo",
+                moveEaseTime: 200,
+                moveEasing: "easeOutBounce"
             });
+
             setTimeout(function () {
                 a.floatingMessage("destroy");
+            }, 3000);
+
+            var b = $.floatingMessage("This user already exist.", {
+                position: "top-right",
+                height: 40,
+                show: "blind",
+                hide: "puff",
+                stuffEaseTime: 100,
+                stuffEasing: "easeInExpo",
+                moveEaseTime: 200,
+                moveEasing: "easeOutBounce"
+            });
+
+            setTimeout(function () {
+                b.floatingMessage("destroy");
+            }, 3000);
+            var c = $.floatingMessage("Email can not be blank.", {
+                position: "top-right",
+                height: 40,
+                show: "blind",
+                hide: "puff",
+                stuffEaseTime: 100,
+                stuffEasing: "easeInExpo",
+                moveEaseTime: 200,
+                moveEasing: "easeOutBounce"
+            });
+            setTimeout(function () {
+                c.floatingMessage("destroy");
+            }, 3000);
+
+            var d = $.floatingMessage("Username cannot be blank.", {
+                position: "top-right",
+                height: 40,
+                show: "blind",
+                hide: "puff",
+                stuffEaseTime: 100,
+                stuffEasing: "easeInExpo",
+                moveEaseTime: 200,
+                moveEasing: "easeOutBounce"
+            });
+            setTimeout(function () {
+                d.floatingMessage("destroy");
             }, 3000);
         </script>
     </body>
