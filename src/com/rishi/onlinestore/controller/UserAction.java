@@ -1,15 +1,19 @@
 package com.rishi.onlinestore.controller;
 
+import com.google.gson.Gson;
 import com.opensymphony.xwork2.ActionContext;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.rishi.onlinestore.lib.DBG;
 import com.rishi.onlinestore.model.User;
 import com.rishi.onlinestore.service.UserService;
+import com.rishi.onlinestore.util.ValidateUtil;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class UserAction extends ActionSupport {
@@ -20,6 +24,15 @@ public class UserAction extends ActionSupport {
     private UserService userService;
     private HttpServletRequest request;
     private ServletContext application;
+    private String validation_messages;
+
+    public String getValidation_messages() {
+        return validation_messages;
+    }
+
+    public void setValidation_messages(String validation_messages) {
+        this.validation_messages = validation_messages;
+    }
 
     public User getUser() {
         return user;
@@ -74,9 +87,24 @@ public class UserAction extends ActionSupport {
 
         try {
 
-            if (null != user) {
-                userService = new UserService();
-                boolean result = userService.register(user);
+            if (null != user && null != user.getEmail()) {
+                List<String> errors = validation(user);
+
+                DBG.d("ERRORS", "" + errors.toString());
+
+                if (errors.size() <= 0) {
+                    userService = new UserService();
+
+                    boolean result = userService.register(user);
+                } else {
+                    String errs = new Gson().toJson(errors);
+                    DBG.d("ERRORS 2", "" + errs);
+
+                    setValidation_messages(errs);
+                    DBG.d("ERRORS 3", "" + getValidation_messages());
+
+                }
+
                 ret = "register";
 
             }
@@ -85,6 +113,35 @@ public class UserAction extends ActionSupport {
         }
         return ret;
 
+    }
+
+    private List<String> validation(User _user) {
+        userService = new UserService();
+
+        List<String> errors = new ArrayList<>();
+
+        if (null != _user) {
+            DBG.d("ERRORS", "User not null ! ");
+
+            if (!(null != _user.getEmail() && !_user.getEmail().trim().isEmpty())) {
+                errors.add("Email cannot be empty!");
+            } 
+            
+            if (ValidateUtil.isValidEmailAddress(_user.getEmail())) {
+                errors.add("Please enter valid email!");
+
+            }
+            if (!(null != _user.getPassword() && !_user.getPassword().trim().isEmpty())) {
+                errors.add("Password cannot be empty!");
+            }
+            if (userService.isUserExists(_user)) {
+                errors.add("User already exist!");
+            }
+        } else {
+            errors.add("Some error occured !");
+        }
+
+        return errors;
     }
 
 }

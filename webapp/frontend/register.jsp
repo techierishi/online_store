@@ -90,64 +90,34 @@
         <jsp:include page="commons/footer.jsp"></jsp:include>
         <jsp:include page="commons/script.jsp"></jsp:include>
 
-        <script>
+            <script>
 
-            var a = $.floatingMessage("Please enter valid email id.", {
-                position: "top-right",
-                height: 40,
-                show: "blind",
-                hide: "puff",
-                stuffEaseTime: 100,
-                stuffEasing: "easeInExpo",
-                moveEaseTime: 200,
-                moveEasing: "easeOutBounce"
-            });
+                var json_errs = <s:property value="%{validation_messages}" escape="false" />;
 
-            setTimeout(function () {
-                a.floatingMessage("destroy");
-            }, 3000);
+                //var json_errs = JSON.parse(errs);
 
-            var b = $.floatingMessage("This user already exist.", {
-                position: "top-right",
-                height: 40,
-                show: "blind",
-                hide: "puff",
-                stuffEaseTime: 100,
-                stuffEasing: "easeInExpo",
-                moveEaseTime: 200,
-                moveEasing: "easeOutBounce"
-            });
+                if (json_errs.length > 0) {
+                   
+                    for (var i = 0; i < json_errs.length; i++) {
 
-            setTimeout(function () {
-                b.floatingMessage("destroy");
-            }, 3000);
-            var c = $.floatingMessage("Email can not be blank.", {
-                position: "top-right",
-                height: 40,
-                show: "blind",
-                hide: "puff",
-                stuffEaseTime: 100,
-                stuffEasing: "easeInExpo",
-                moveEaseTime: 200,
-                moveEasing: "easeOutBounce"
-            });
-            setTimeout(function () {
-                c.floatingMessage("destroy");
-            }, 3000);
+                        var a = $.floatingMessage("" + json_errs[i], {
+                            position: "top-right",
+                            height: 40,
+                            show: "blind",
+                            hide: "puff",
+                            stuffEaseTime: 100,
+                            stuffEasing: "easeInExpo",
+                            moveEaseTime: 200,
+                            moveEasing: "easeOutBounce"
+                        });
 
-            var d = $.floatingMessage("Username cannot be blank.", {
-                position: "top-right",
-                height: 40,
-                show: "blind",
-                hide: "puff",
-                stuffEaseTime: 100,
-                stuffEasing: "easeInExpo",
-                moveEaseTime: 200,
-                moveEasing: "easeOutBounce"
-            });
-            setTimeout(function () {
-                d.floatingMessage("destroy");
-            }, 3000);
+//                        setTimeout(function () {
+//                            a.floatingMessage("destroy");
+//                        }, 3000);
+                    }
+                }
+
+
         </script>
     </body>
 

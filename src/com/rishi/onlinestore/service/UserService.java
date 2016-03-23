@@ -12,10 +12,6 @@ public class UserService {
 
     public boolean register(User user) {
         Session session = HibernateUtil.openSession();
-        if (isUserExists(user)) {
-            return false;
-        }
-
         Transaction tx = null;
         try {
             tx = session.getTransaction();
